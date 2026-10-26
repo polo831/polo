@@ -63,20 +63,20 @@ class SiteController extends Controller
 	    $nombreUsuario = isset($_SESSION['USER']['name']) ? htmlspecialchars($_SESSION['USER']['name']) : 'Usuario';
 	    
 	    // Construir dinámicamente el fragmento HTML según la sesión
-	    if (isset($_SESSION['USER']['id_usuario'])) {
-	        $authSection = '
-	            <li class="nav-item">
-	                <span class="navbar-text fw-semibold text-light me-1">Hola, ' . $nombreUsuario . '</span>
-	            </li>
-	            <li class="nav-item">
-	                <a class="btn btn-outline-light btn-sm px-3" href="' . static::$path . 'auth/logout">Cerrar Sesión</a>
-	            </li>';
-	    } else {
-	        $authSection = '
-	            <li class="nav-item">
-	                <a class="btn btn-light btn-sm px-3 fw-bold" href="' . static::$path . 'auth/login">Iniciar Sesión</a>
-	            </li>';
-	    }
+	 if (isset($_SESSION['USER']['id_usuario'])) {
+            $authSection = '
+                <li class="nav-item">
+                    <span class="navbar-text fw-semibold text-light me-1">Hola, ' . $nombreUsuario . '</span>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-outline-light btn-sm px-3" href="' . static::$path . 'index.php?url=auth/logout">Cerrar Sesión</a>
+                </li>';
+        } else {
+            $authSection = '
+                <li class="nav-item">
+                    <a class="btn btn-light btn-sm px-3 fw-bold" href="' . static::$path . 'index.php?url=auth/login">Iniciar Sesión</a>
+                </li>';
+        }
 
 	    // Array de reemplazo para strtr manteniendo tu estructura original
 	    $arr = array(

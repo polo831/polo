@@ -22,7 +22,7 @@ class AuthController extends Controller
         /*para que no vuelva a iniciar sesion*/
         if (self::$sessionStatus === "Online") {
             static::path();
-            $ruta = self::$path.'home';
+            $ruta = self::$path.'index.php?url=home';
             header("Location: $ruta");
         }
         $error = null;
@@ -40,7 +40,7 @@ class AuthController extends Controller
 
                     if ($logueo === true) {
                         static::path();
-                        $ruta = self::$path.'home';
+                        $ruta = self::$path.'index.php?url=home';
                         header("Location: $ruta");
                     }
                 } else {
@@ -130,9 +130,10 @@ class AuthController extends Controller
     public function actionLogout(){
         session_destroy();
         static::path();
-        $ruta = self::$path.'auth/login/';
+        $ruta = self::$path.'index.php?url=auth/login';
         $_SESSION['SESSION']['STATUS'] = false;
         header("Location: $ruta");
+    
     }
 
     /*recuperar contraseña*/

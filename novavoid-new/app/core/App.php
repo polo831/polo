@@ -43,7 +43,7 @@ class App
         if (file_exists($checkArchivoControlador)) {
             // Si existe, establece ese controlador para ser instanciado.
             if ($controladorPorDefecto == false) {
-                $this->controller = APP_PATH . "controllers/" . $controllerActive;
+                $this->controller = $this->controller = "app\\controllers\\" . $controllerActive;
             }
 
             // Instancia el controlador.

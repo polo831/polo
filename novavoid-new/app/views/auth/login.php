@@ -36,7 +36,8 @@
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 <?php endif; ?>
-                 <form action="" method="POST">
+                <form action="index.php?url=auth/login" method="POST">
+                
                     <div class="mb-3">
                         <label for="email" class="form-label fw-semibold">Correo Electrónico</label>
                         <div class="input-group">

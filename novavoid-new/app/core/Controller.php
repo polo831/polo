@@ -54,6 +54,8 @@ class Controller
 		}
 		self::$path = $dirFiles;
 	}
+     
+
 
 	protected function viewDir($nameSpace){
 		$replace = array($nameSpace,'Controller');
