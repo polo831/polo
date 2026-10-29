@@ -36,7 +36,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 <?php endif; ?>
-                <form action="index.php?url=auth/login" method="POST">
+                <form action="polo/novavoid-new/public/index.php?url=auth/login" method="POST">
                 
                     <div class="mb-3">
                         <label for="email" class="form-label fw-semibold">Correo Electrónico</label>

@@ -25,11 +25,16 @@
         <!-- Menú Lateral -->
          <nav class="sidebar">
     <h2>Panel Tienda</h2>
-    <ul>
-        <li><a href="index.php?url=admin">Inicio</a></li>
-        <li><a href="index.php?url=admin/productos">Gestionar Productos (ABM)</a></li>
-        <li><a href="index.php?url=admin/usuarios">Gestionar Usuarios</a></li>
-        <li><a href="index.php?url=auth/logout">Cerrar Sesión</a></li>
+  <ul>
+    <li><a href="<?= $ruta ?>public/index.php?url=admin">Inicio</a></li>
+    <li><a href="<?= $ruta ?>public/index.php?url=admin/productos">Gestionar Productos (ABM)</a></li>
+    <li><a href="<?= $ruta ?>public/index.php?url=admin/usuarios">Gestionar Usuarios</a></li>
+    <li><a href="<?= $ruta ?>public/index.php?url=admin/pedidos">Gestionar Pedidos</a></li>
+    <li><a href="<?= $ruta ?>public/index.php?url=auth/logout">Cerrar Sesión</a></li>
+</ul>
+      
+
+    
     </ul>
     </nav>
        

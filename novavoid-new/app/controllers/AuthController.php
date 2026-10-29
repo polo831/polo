@@ -40,7 +40,7 @@ class AuthController extends Controller
 
                     if ($logueo === true) {
                         static::path();
-                        $ruta = self::$path.'index.php?url=home';
+                        $ruta = self::$path.'novavoid-new/app/views/home/home.php';
                         header("Location: $ruta");
                     }
                 } else {
@@ -130,7 +130,7 @@ class AuthController extends Controller
     public function actionLogout(){
         session_destroy();
         static::path();
-        $ruta = self::$path.'index.php?url=auth/login';
+        $ruta = self::$path.'auth/login';
         $_SESSION['SESSION']['STATUS'] = false;
         header("Location: $ruta");
     
